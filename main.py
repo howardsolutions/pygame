@@ -1,3 +1,4 @@
+import sys;
 from constants import *
 
 import pygame;
@@ -24,6 +25,8 @@ def main():
     AsteroidField.containers = updatable
     asteroid_field = AsteroidField()
     
+    Player.containers = (updatable, drawable)
+    
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     
     while True:
@@ -35,11 +38,15 @@ def main():
         # Moving Around 
         updatable.update(dt)
         
+        for asteroid in asteroids:
+            if asteroid.collides_with(player):
+                print("Game Over")
+                sys.exit()
+        
         # fill the screen w black color
         screen.fill("black")
         
         # re-render the player on the screen each frame
-        # player.draw(screen)
         for obj in drawable:
             obj.draw(screen)
     

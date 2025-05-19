@@ -90,6 +90,15 @@
         "documentation": {}
     },
     {
+        "label": "sys;",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys;",
+        "description": "sys;",
+        "detail": "sys;",
+        "documentation": {}
+    },
+    {
         "label": "pygame;",
         "kind": 6,
         "isExtraImport": true,
