@@ -20,6 +20,9 @@ def main():
             if event.type == pygame.QUIT:
                 return
         
+        # Moving Around 
+        player.update(dt)
+        
         # fill the screen w black color
         screen.fill("black")
         
