@@ -33,6 +33,14 @@
         "documentation": {}
     },
     {
+        "label": "PLAYER_SPEED",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
         "label": "pygame;",
         "kind": 6,
         "isExtraImport": true,
@@ -71,7 +79,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "SCREEN_WIDTH = 1280\nSCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "SCREEN_WIDTH = 1280\nSCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -80,7 +88,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "SCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "SCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -89,7 +97,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "ASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -98,7 +106,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "ASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -107,7 +115,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "ASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -116,7 +124,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -125,7 +133,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "PLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300",
+        "peekOfCode": "PLAYER_RADIUS = 20\nPLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
@@ -134,7 +142,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "PLAYER_TURN_SPEED = 300",
+        "peekOfCode": "PLAYER_TURN_SPEED = 300\nPLAYER_SPEED=200",
         "detail": "constants",
         "documentation": {}
     },
