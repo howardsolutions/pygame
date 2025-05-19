@@ -151,7 +151,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main():\n    #  init the game\n    pygame.init()\n    clock = pygame.time.Clock()\n    dt = 0\n    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)\n    while True:\n        # check if the user has closed the window and exit the game loop\n        for event in pygame.event.get():",
+        "peekOfCode": "def main():\n    #  init the game\n    pygame.init()\n    clock = pygame.time.Clock()\n    dt = 0\n    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n    # Game groups \n    updatable = pygame.sprite.Group()\n    drawable = pygame.sprite.Group()\n    Player.containers = (updatable, drawable)",
         "detail": "main",
         "documentation": {}
     },

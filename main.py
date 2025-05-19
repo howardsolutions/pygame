@@ -12,6 +12,13 @@ def main():
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     
+    
+    # Game groups 
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+    
+    Player.containers = (updatable, drawable)
+    
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     
     while True:
@@ -21,13 +28,15 @@ def main():
                 return
         
         # Moving Around 
-        player.update(dt)
+        updatable.update(dt)
         
         # fill the screen w black color
         screen.fill("black")
         
         # re-render the player on the screen each frame
-        player.draw(screen)
+        # player.draw(screen)
+        for obj in drawable:
+            obj.draw(screen)
     
         # update aka refresh the screen
         pygame.display.flip()
