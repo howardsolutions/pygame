@@ -1,6 +1,23 @@
 [
     {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
         "label": "*",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "PLAYER_RADIUS",
         "importPath": "constants",
         "description": "constants",
         "isExtraImport": true,
@@ -17,11 +34,36 @@
         "documentation": {}
     },
     {
+        "label": "Player",
+        "importPath": "player",
+        "description": "player",
+        "isExtraImport": true,
+        "detail": "player",
+        "documentation": {}
+    },
+    {
+        "label": "CircleShape",
+        "importPath": "circleshape",
+        "description": "circleshape",
+        "isExtraImport": true,
+        "detail": "circleshape",
+        "documentation": {}
+    },
+    {
+        "label": "CircleShape",
+        "kind": 6,
+        "importPath": "circleshape",
+        "description": "circleshape",
+        "peekOfCode": "class CircleShape(pygame.sprite.Sprite):\n    def __init__(self, x, y, radius):\n        if hasattr(self, \"containers\"):\n            super().__init__(self.containers)\n        else:\n            super().__init__()\n        self.position = pygame.Vector2(x, y)\n        self.velocity = pygame.Vector2(0, 0)\n        self.radius = radius\n    def draw(self, screen):",
+        "detail": "circleshape",
+        "documentation": {}
+    },
+    {
         "label": "SCREEN_WIDTH",
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "SCREEN_WIDTH = 1280\nSCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS",
+        "peekOfCode": "SCREEN_WIDTH = 1280\nSCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20",
         "detail": "constants",
         "documentation": {}
     },
@@ -30,7 +72,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "SCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS",
+        "peekOfCode": "SCREEN_HEIGHT = 720\nASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20",
         "detail": "constants",
         "documentation": {}
     },
@@ -39,7 +81,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS",
+        "peekOfCode": "ASTEROID_MIN_RADIUS = 20\nASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20",
         "detail": "constants",
         "documentation": {}
     },
@@ -48,7 +90,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS",
+        "peekOfCode": "ASTEROID_KINDS = 3\nASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20",
         "detail": "constants",
         "documentation": {}
     },
@@ -57,7 +99,7 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS",
+        "peekOfCode": "ASTEROID_SPAWN_RATE = 0.8  # seconds\nASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20",
         "detail": "constants",
         "documentation": {}
     },
@@ -66,7 +108,16 @@
         "kind": 5,
         "importPath": "constants",
         "description": "constants",
-        "peekOfCode": "ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS",
+        "peekOfCode": "ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS\nPLAYER_RADIUS = 20",
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "PLAYER_RADIUS",
+        "kind": 5,
+        "importPath": "constants",
+        "description": "constants",
+        "peekOfCode": "PLAYER_RADIUS = 20",
         "detail": "constants",
         "documentation": {}
     },
@@ -75,8 +126,17 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main():\n    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n    while True:\n        # check if the user has closed the window and exit the game loop\n        for event in pygame.event.get():\n            if event.type == pygame.QUIT:\n                return\n        # fill the screen w black color\n        screen.fill(\"black\")\n        # update aka refresh the screen",
+        "peekOfCode": "def main():\n    #  init the game\n    pygame.init()\n    clock = pygame.time.Clock()\n    dt = 0\n    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n    player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)\n    while True:\n        # check if the user has closed the window and exit the game loop\n        for event in pygame.event.get():",
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "player",
+        "description": "player",
+        "peekOfCode": "class Player(CircleShape):\n    def __init__(self, x, y):\n        super().__init__(x, y, PLAYER_RADIUS)\n        self.rotation = 0\n    # in the player class\n    def triangle(self):\n        forward = pygame.Vector2(0, 1).rotate(self.rotation)\n        right = pygame.Vector2(0, 1).rotate(self.rotation + 90) * self.radius / 1.5\n        a = self.position + forward * self.radius\n        b = self.position - forward * self.radius - right",
+        "detail": "player",
         "documentation": {}
     }
 ]
